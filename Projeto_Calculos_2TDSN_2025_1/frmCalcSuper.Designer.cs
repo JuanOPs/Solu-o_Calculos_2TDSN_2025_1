@@ -296,7 +296,7 @@
             this.button17.TabStop = false;
             this.button17.Text = "pot";
             this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.button17.Click += new System.EventHandler(this.f_operacoes);
             // 
             // button16
             // 
@@ -307,9 +307,9 @@
             this.button16.Size = new System.Drawing.Size(91, 38);
             this.button16.TabIndex = 5;
             this.button16.TabStop = false;
-            this.button16.Text = ":";
+            this.button16.Text = "/";
             this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.button16.Click += new System.EventHandler(this.f_operacoes);
             // 
             // button15
             // 
@@ -320,9 +320,9 @@
             this.button15.Size = new System.Drawing.Size(91, 38);
             this.button15.TabIndex = 4;
             this.button15.TabStop = false;
-            this.button15.Text = "x";
+            this.button15.Text = "*";
             this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button15.Click += new System.EventHandler(this.f_operacoes);
             // 
             // button14
             // 
@@ -335,7 +335,7 @@
             this.button14.TabStop = false;
             this.button14.Text = "-";
             this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button14.Click += new System.EventHandler(this.f_operacoes);
             // 
             // btnadd
             // 
@@ -348,7 +348,7 @@
             this.btnadd.TabStop = false;
             this.btnadd.Text = "+";
             this.btnadd.UseVisualStyleBackColor = true;
-            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            this.btnadd.Click += new System.EventHandler(this.f_operacoes);
             // 
             // label1
             // 

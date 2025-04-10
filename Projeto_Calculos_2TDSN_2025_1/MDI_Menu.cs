@@ -59,5 +59,10 @@ namespace Projeto_Calculos_2TDSN_2025_1
             obj_cs.MdiParent = this;
             obj_cs.Show();
         }
+
+        private void stlUsuario_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

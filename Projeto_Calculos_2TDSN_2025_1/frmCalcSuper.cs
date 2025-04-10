@@ -54,18 +54,49 @@ namespace Projeto_Calculos_2TDSN_2025_1
         private void btnIgual_Click(object sender, EventArgs e)
         {
             decimal vNumAtual = decimal.Parse(lblVisor.Text);
-            switch (operacao)
+            try
             {
-                case "+":
-                    lblVisor.Text=(vNumAnt + vNumAtual).ToString();
-                    break;
-                case "-":
-                    lblVisor.Text = (vNumAnt - vNumAtual).ToString();
-                    break;
-                case"Return":
-                   btnIgual_Click (sender, e);
-                    break;
+                switch (operacao)
+                {
+                    case "+":
+                        label1.Text = "+";
+                        lblVisor.Text = (vNumAnt + vNumAtual).ToString();
+                        break;
+
+                    case "-":
+                        label1.Text = "-";
+                        lblVisor.Text = (vNumAnt - vNumAtual).ToString();
+                        break;
+
+                    case "*":
+                        label1.Text = "*";
+                        lblVisor.Text = (vNumAnt * vNumAtual).ToString();
+                        break;
+
+                    case "/":
+                        label1.Text = "/";
+                        lblVisor.Text = (vNumAnt / vNumAtual).ToString();
+                        break;
+
+                    case "pot":
+                        label1.Text = "^";
+                        lblVisor.Text = Math.Pow((double)vNumAnt, (double)vNumAtual).ToString();
+                        break;
+
+                    case "Return":
+                        btnIgual_Click(sender, e);
+                        break;
+                }
             }
+            catch (FormatException)
+            {
+                MessageBox.Show("Favor, apenas números", "Erro!!");
+            }
+            catch (DivideByZeroException)
+            {
+                MessageBox.Show("Impossível divisão", "Erro!!");
+            }
+
             lblVisor.Focus();
         }
 
@@ -112,20 +143,24 @@ namespace Projeto_Calculos_2TDSN_2025_1
 
             switch (e.KeyCode.ToString())
             {
-                case "add":
+                case "Add":
                     bot.Text = "+";
                     break;
 
-                case "substract":
+                case "Subtract":
                     bot.Text = "-";
                     break;
 
-                case "multiplicação":
+                case "Multiply":
                     bot.Text = "*";
                     break;
 
-                case "divisão":
+                case "Divide":
                     bot.Text = "/";
+                    break;
+                
+                case "Power":
+                    bot.Text = "^";
                     break;
             }
         }
@@ -148,30 +183,6 @@ namespace Projeto_Calculos_2TDSN_2025_1
                 lblVisor.Text = "0";
             }
         }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnadd_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
     }
 }
